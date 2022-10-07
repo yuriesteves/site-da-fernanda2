@@ -52,7 +52,7 @@ header h1:active{
     max-width: 360px;
 }
 
-#top-info button{
+#top-info button, footer button{
     margin: auto;
     display: block;
     margin-top: 15px;
@@ -206,6 +206,14 @@ footer{
     padding-bottom: 15px;
     font-size: 0.8em;
     color: crimson;
+}
+
+footer #button2{
+    display: none;
+}
+
+footer h1{
+    display: none;
 }
 
 @media screen and (min-width: 870px) {
