@@ -1,0 +1,268 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins";
+}
+
+:root{
+    /* cores */
+
+    --branco: white;
+    --cinza: #333333;
+    --vermelho: #d38f84e7;
+    --verde: #92D490;
+
+
+    /* tamanho de fonte */
+
+    --fonte: 0.7em;
+}
+
+header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--vermelho);
+    color: var(--branco);
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+header h1{
+    margin-left: 5px;
+    margin-right: 5px;
+    transition-delay: 1ms;
+    transition-duration: 1s;
+    transition-property: all;
+    transition-timing-function: ease;
+}
+
+header h1:active{
+    color: var(--vermelho);
+}
+
+/* aside */
+
+#top-info{
+    max-width: 360px;
+}
+
+#top-info button{
+    margin: auto;
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    background-color: var(--verde);
+    outline: none;
+    border: none;
+    color: var(--branco);
+    padding: 5px;
+    cursor: pointer;
+
+}
+
+/* aside2 */
+
+#blackscreen{
+    display: none;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    width: 375px;
+    height: 1000px;
+    
+    animation-duration: 10s;
+    animation-name: showblackscreen;
+    animation-direction: alternate;
+}
+
+#blackscreen p{
+    display: block;
+    color: white;
+    margin-top: 25%;
+    opacity: 0%;
+    margin-left: 15px;
+    
+    animation-duration: 10s;
+    animation-name: sumir;
+    animation-direction: alternate;
+}
+
+#blackscreen svg{
+    margin-left: 50px;
+    margin-top: 30px;
+
+    animation-duration: 10s;
+    animation-name: sumir;
+    animation-direction: alternate;
+    opacity: 0%;
+    
+}
+
+@keyframes sumir {
+    from{
+        opacity: 100%;
+    }
+
+    to{
+        opacity: 0%;
+    }
+}
+
+@keyframes showblackscreen {
+    from{
+        background-color: var(--cinza);
+        display: block;
+    }
+    to{
+        display: none;
+    }
+}
+
+
+/* main */
+
+main{
+    max-width: 360px;
+    display: none;
+    padding-bottom: 50px;
+}
+
+main .vaievolta, #top-info .vaievolta{
+    font-family: sans-serif;
+    font-size: 1.2em;
+    margin: 15px 0px 15px 15px;
+    color: var(--vermelho);
+
+    animation-duration: 3s;
+    animation-name: slidein;
+    animation-direction: alternate-reverse;
+}
+
+@keyframes slidein {
+    from{
+        margin-left: 15px;
+        width: 100%;
+        color: var(--vermelho);
+    }
+
+    to{
+        margin-left: 100%;
+        width: 300%;
+        color: var(--cinza);
+    }
+}
+
+main img{
+    display: block;
+    width: 200px;
+    height: 250px;
+    max-width: 700px;
+    margin: auto;
+    box-shadow: 1px 1px 12px #333333;
+    
+    animation-duration: 6s;
+    animation-name: show;
+    animation-direction: alternate;
+}
+
+main #foto2{
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+@keyframes show {
+    from{
+        opacity: 0%;
+    }
+    to{
+        opacity: 100%;
+    }
+}
+
+main p, #top-info p{
+    margin: 15px 0px 0px 15px;
+    text-align: justify;
+    font-size: var(--fonte);
+}
+
+main video{
+    display: block;
+    margin: auto;
+    border: 5px solid var(--cinza);
+    box-shadow: 1px 1px 12px #333333;
+    margin-top: 25px;
+}
+
+/* footer */
+
+footer{
+    text-align: center;
+    padding-bottom: 15px;
+    font-size: 0.8em;
+    color: crimson;
+}
+
+@media screen and (min-width: 870px) {
+   #top-info{
+        max-width: 1200px;
+        margin: auto;
+   } 
+
+   #top-info button{
+        width: 200px;
+        height: 50px;
+        font-size: 1em;
+        font-weight: bolder;
+   }
+
+   /* aside2 */
+
+   #blackscreen{
+    width: 100%;
+   }
+
+   #blackscreen p{
+        margin-top: 20%;
+        margin-left: 35%;
+        font-size: 1.5em;
+    }
+    
+    #blackscreen svg{
+       margin-left: 45%;
+
+   }
+    
+    main{
+        max-width: 1200px;
+        margin: auto;
+    }
+
+    main .vaievolta, #top-info .vaievolta{
+        text-align: center;
+        font-size: 1.5em;
+    }
+
+    main img{
+        width: 550px;
+        height: 750px;
+    }
+    
+    main #foto2{
+        width: 750px;
+    }
+
+    main p, #top-info p{
+        font-size: 1.2em;
+    }
+
+    main video{
+        width: 500px;
+        height: 500px;
+    }
+}
