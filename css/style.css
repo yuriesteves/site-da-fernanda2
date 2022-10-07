@@ -2,6 +2,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
 
 
+/* searchKeys
+    main
+    footer
+    header
+    aside
+    #top-info
+    #blackscreen */
+
 *{
     margin: 0;
     padding: 0;
@@ -171,9 +179,13 @@ main img{
     animation-direction: alternate;
 }
 
-main #foto2{
+main #foto2, main #foto3{
     margin-top: 15px;
     margin-bottom: 15px;
+}
+
+main #foto3{
+    height: 350px;
 }
 
 @keyframes show {
