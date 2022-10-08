@@ -13,5 +13,7 @@ function musica2(){
     const tchubiraumdaumdaum = document.querySelector("#tchubiraumdaumdaum")
     tchubiraumdaumdaum.play()
     alert(`eu te love garota dos cabelos vermelhos <3`)
-    
+    let blackscreen2 = document.querySelector("#blackscreen2")
+    blackscreen2.style.display = "block"
+    window.scrollTo(0, 0)
 }
